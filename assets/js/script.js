@@ -48,12 +48,13 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
-$(document).ready(function () {
-    var form = $('.downloadAndPrintContent.active'),
+$(document).ready(function () {   
+    var form = ""; 
+    $(document).on('click','#downloadButton', function () {
+        form = $('.downloadAndPrintContent.active'),
         cache_width = form.width(),
         a4 = [595.28, 841.89];
 
-    $('#downloadButton').on('click', function () {
         $('body').scrollTop(0);
         createPDF();
     });
