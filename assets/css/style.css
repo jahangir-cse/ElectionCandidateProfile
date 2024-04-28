@@ -1,0 +1,66 @@
+@font-face {
+    font-family: HindiShiliguriBold;
+    src: url(/assets/fonts/Hind_Siliguri-Bold.ttf);
+}
+@font-face {
+    font-family: BalooDa2;
+    src: url(/assets/fonts/BalooDa2-Regular.ttf);
+}
+@font-face {
+    font-family: LatoBold;
+    src: url(/assets/fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: LatoRegular;
+    src: url(/assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: LatoSemiBold;
+    src: url(/assets/fonts/Lato-Semibold.ttf);
+}
+.container {
+    max-width: 1164px;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    font-family: "BalooDa2", "Open Sans", sans-serif;
+    color: #000;
+    touch-action: manipulation;
+}
+h1,h2{
+    font-family: HindiShiliguriBold;
+}
+.d-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bannar-section .profile-img-div{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: 2px solid red;
+    background-color: bisque;
+}
+.bannar-section .profile-img-div img{
+    width: 100%;
+    height: 100%;
+}
+.bannar-section .qrcode-img{
+    width: 150px;
+    height: 150px;
+}
+.bannar-section .dynamic-data{
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+}
+.bannar-section .single-item.active{
+    padding: 10px;
+    border: 3px solid green;
+}
