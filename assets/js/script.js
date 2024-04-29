@@ -43,8 +43,9 @@ $(document).ready(function () {
         let nameInput = $(this).val().trim();
         $('.cadidate-designation').text(nameInput);
     });
+    $('.banner-section .single-item:first-child()').addClass('active');
     $(document).on('click', '.banner-section .single-item', function () {
-        $('.banner-section .single-item').removeClass('active')
+        $('.banner-section .single-item').removeClass('active');
         $(this).addClass('active');
     });
 });
@@ -62,7 +63,6 @@ $(document).ready(function () {
     function createImage() {
         getCanvas().then(function (canvas) {
             var img = canvas.toDataURL("image/jpeg", 1.0);
-            // Trigger download of image
             var link = document.createElement('a');
             link.href = img;
             link.download = 'image.jpg';
@@ -81,7 +81,7 @@ $(document).ready(function () {
             removeContainer: true,
             logging: true,
             scale: 2,
-            dpi: 300
+            dpi: 300,      
             //height: contentHeight
         });
     }
