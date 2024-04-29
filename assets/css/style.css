@@ -48,12 +48,12 @@ h1,h2{
     background-color: #1e1e50;
 }
 .banner-section .banner-img-div img{
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background: transparent;
 }
 .banner-section .profile-img-div{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 5px;
     border: 2px solid #03035a;
     background-color: #1e1e50;
@@ -63,13 +63,13 @@ h1,h2{
     height: 100%;
 }
 .banner-section .qrcode-img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 .banner-section .dynamic-data{
     left: 20px;
     right: 20px;
-    bottom: 0px;
+    bottom: 4px;
 }
 .banner-section .single-item > div{
     border-radius: 10px;
@@ -79,10 +79,9 @@ h1,h2{
     border: 3px solid #03035a;
     background-color: #fff;
 }
-.banner-section .single-item.active .downloadAndPrintContent{
-    height: 560px;
-    width: 560px;
-}
+/* .banner-section .single-item.active .downloadAndPrintContent{
+    height: 680px;
+} */
 .banner-section .title{
     color: lightgreen;
 }

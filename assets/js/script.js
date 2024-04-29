@@ -75,12 +75,14 @@ $(document).ready(function () {
 
     function getCanvas() {
         form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');
+        var contentHeight = form[0].scrollHeight;
         return html2canvas(form, {
             imageTimeout: 2000,
             removeContainer: true,
             logging: true,
             scale: 2,
             dpi: 300
+            //height: contentHeight
         });
     }
 });
