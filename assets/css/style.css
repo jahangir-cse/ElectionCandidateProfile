@@ -31,6 +31,10 @@ body {
     font-family: "BalooDa2", "Open Sans", sans-serif;
     color: #000;
     touch-action: manipulation;
+    overflow-x: hidden;
+}
+.row{
+    row-gap: 20px;
 }
 h1,h2{
     font-family: HindiShiliguriBold;
@@ -40,27 +44,62 @@ h1,h2{
     justify-content: center;
     align-items: center;
 }
-.bannar-section .profile-img-div{
+.banner-section .banner-img-div img{
+    border-radius: 10px;
+    background: transparent;
+}
+.banner-section .profile-img-div{
     width: 150px;
     height: 150px;
     border-radius: 5px;
-    border: 2px solid red;
-    background-color: bisque;
+    border: 2px solid #03035a;
+    background-color: #1e1e50;
 }
-.bannar-section .profile-img-div img{
+.banner-section .profile-img-div img{
     width: 100%;
     height: 100%;
 }
-.bannar-section .qrcode-img{
+.banner-section .qrcode-img{
     width: 150px;
     height: 150px;
 }
-.bannar-section .dynamic-data{
+.banner-section .dynamic-data{
     left: 20px;
     right: 20px;
     bottom: 10px;
 }
-.bannar-section .single-item.active{
-    padding: 10px;
-    border: 3px solid green;
+.banner-section .single-item > div{
+    border-radius: 10px;
+}
+.banner-section .single-item.active{
+    padding: 15px;
+    border: 3px solid #03035a;
+    background-color: #fff;
+}
+.banner-section .title{
+    color: lightgreen;
+}
+.canvas-section{
+    height: 100px;
+    overflow: hidden;
+}
+.banner-section .input-section .browse-file,.banner-section .input-section .form-control{
+    min-width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #03035a;
+}
+footer{
+    background-color: #1e1e50;
+    color: #fff;
+    padding: 20px 10px;
+}
+@media (max-width: 768px){
+    .banner-section .profile-img-div,.banner-section .qrcode-img{
+        width: 100px;
+        height: 100px;
+    }
+    .banner-section .input-section > div{
+        flex-direction: column;        
+    }
 }

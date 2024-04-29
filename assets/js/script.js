@@ -43,15 +43,15 @@ $(document).ready(function () {
         let nameInput = $(this).val().trim();
         $('.cadidate-designation').text(nameInput);
     });
-    $(document).on('click', '.bannar-section .single-item', function () {
-        $('.bannar-section .single-item').removeClass('active')
+    $(document).on('click', '.banner-section .single-item', function () {
+        $('.banner-section .single-item').removeClass('active')
         $(this).addClass('active');
     });
 });
 $(document).ready(function () {   
     var form = ""; 
     $(document).on('click','#downloadButton', function () {
-        form = $('.downloadAndPrintContent.active'),
+        form = $('.single-item.active .downloadAndPrintContent'),
         cache_width = form.width(),
         a4 = [595.28, 841.89];
 
@@ -68,7 +68,7 @@ $(document).ready(function () {
                     format: 'a4'
                 });
             doc.addImage(img, 'JPEG', 20, 20);
-            doc.save('bannar.pdf');
+            doc.save('banner.pdf');
             form.width(cache_width);
         });
     }
