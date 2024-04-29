@@ -49,9 +49,23 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
-$(document).ready(function () {   
+$(document).ready(function () {  
+    //var text = $('.banner-section .single-item.active .title').text();
+    //var image = convertTextToImage(text);
+    //$('.banner-section .single-item.active .title').html(image); 
     var form = ""; 
     $(document).on('click','#downloadButton', function () {
+
+        var titleText = $('.banner-section .single-item.active .title').text();
+        var nameText = $('.banner-section .single-item.active .cadidate-name').text();
+        var designationText = $('.banner-section .single-item.active .cadidate-designation').text();
+        var titleImage = convertTextToImage(titleText,'lightgreen');
+        var nameImage = convertTextToImage(nameText,'#fff');
+        var designationImage = convertTextToImage(designationText,'#fff');
+        $('.banner-section .single-item.active .title').html(titleImage);
+        $('.banner-section .single-item.active .cadidate-name').html(nameImage);
+        $('.banner-section .single-item.active .cadidate-designation').html(designationImage);
+
         form = $('.single-item.active .downloadAndPrintContent'),
         cache_width = form.width(),
         a4 = [595.28, 841.89];
@@ -84,5 +98,17 @@ $(document).ready(function () {
             dpi: 300,      
             //height: contentHeight
         });
-    }
+    }  
+    function convertTextToImage(text,color) {
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+        canvas.width = 250;
+        canvas.height = 30;
+        context.font = 'bold 18px Arial';
+        context.fillStyle = color;
+        context.fillText(text, 10, 25);
+        var image = new Image();
+        image.src = canvas.toDataURL();
+        return image;
+    }    
 });

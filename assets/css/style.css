@@ -18,6 +18,10 @@
     font-family: LatoSemiBold;
     src: url(/assets/fonts/Lato-Semibold.ttf);
 }
+@font-face {
+    font-family: SolaimanLipiBold;
+    src: url(/assets/fonts/SolaimanLipi_Bold.ttf);
+}
 .container {
     max-width: 1164px;
 }
@@ -52,15 +56,21 @@ h1,h2{
     background: transparent;
 }
 .banner-section .profile-img-div{
-    width: 130px;
+    min-width: 130px;
     height: 130px;
     border-radius: 5px;
     border: 2px solid #03035a;
     background-color: #1e1e50;
 }
+.banner-section .profile-img-div.circle-design{
+    border-radius: 50%;
+}
 .banner-section .profile-img-div img{
     min-width: 100%;
     height: 100%;
+}
+.banner-section .profile-img-div.circle-design img{
+    border-radius: 50%;
 }
 .banner-section .qrcode-img{
     min-width: 130px;
@@ -83,12 +93,20 @@ h1,h2{
 /* .banner-section .single-item.active .downloadAndPrintContent{
     height: 680px;
 } */
+.banner-section .info-content{
+    max-width: 250px;
+}
 .banner-section .title{
     color: lightgreen;
-    font-family: "BalooDa2", Arial, sans-serif;
+    font-family: "HindiShiliguriBold", Arial, sans-serif;
 }
 .banner-section .cadidate-name,.banner-section .cadidate-designation{
     color: #fff;
+    overflow-wrap: anywhere;
+    font-size: 16px;
+    font-family: "HindiShiliguriBold", Arial, sans-serif;
+    font-weight: 600;
+    line-height: normal;
 }
 .canvas-section{
     height: 100px;
@@ -120,13 +138,20 @@ footer{
 }
 @media (max-width: 768px){
     .banner-section .profile-img-div,.banner-section .qrcode-img{
-        width: 100px;
-        height: 100px;
+        min-width: 90px;
+        height: 90px;
     }
     .banner-section .input-section > div{
         flex-direction: column;        
     }
     .profile-section .container{
         flex-direction: column;
+    }
+    .banner-section .dynamic-data{
+        left: 5px;
+        right: 5px;
+    }
+    .banner-section .cadidate-name, .banner-section .cadidate-designation{
+        font-size: 14px;
     }
 }
