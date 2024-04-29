@@ -44,6 +44,9 @@ h1,h2{
     justify-content: center;
     align-items: center;
 }
+.navbar{
+    background-color: #1e1e50;
+}
 .banner-section .banner-img-div img{
     border-radius: 10px;
     background: transparent;
@@ -66,7 +69,7 @@ h1,h2{
 .banner-section .dynamic-data{
     left: 20px;
     right: 20px;
-    bottom: 10px;
+    bottom: 0px;
 }
 .banner-section .single-item > div{
     border-radius: 10px;
@@ -76,8 +79,15 @@ h1,h2{
     border: 3px solid #03035a;
     background-color: #fff;
 }
+.banner-section .single-item.active .downloadAndPrintContent{
+    height: 560px;
+    width: 560px;
+}
 .banner-section .title{
     color: lightgreen;
+}
+.banner-section .cadidate-name,.banner-section .cadidate-designation{
+    color: #fff;
 }
 .canvas-section{
     height: 100px;
@@ -88,6 +98,19 @@ h1,h2{
     height: 50px;
     border-radius: 5px;
     border: 2px solid #03035a;
+}
+.profile-section{
+    background-color: #1e1e50;
+    color: #fff;
+}
+.profile-section img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid grey;
+}
+.profile-section p{
+    font-size: 20px;
 }
 footer{
     background-color: #1e1e50;
@@ -101,5 +124,8 @@ footer{
     }
     .banner-section .input-section > div{
         flex-direction: column;        
+    }
+    .profile-section .container{
+        flex-direction: column;
     }
 }

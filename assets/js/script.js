@@ -56,19 +56,19 @@ $(document).ready(function () {
         a4 = [595.28, 841.89];
 
         $('body').scrollTop(0);
-        createPDF();
+        createImage();
     });
 
-    function createPDF() {
+    function createImage() {
         getCanvas().then(function (canvas) {
-            var
-                img = canvas.toDataURL("image/jpeg", 1.0),
-                doc = new jsPDF({
-                    unit: 'px',
-                    format: 'a4'
-                });
-            doc.addImage(img, 'JPEG', 20, 20);
-            doc.save('banner.pdf');
+            var img = canvas.toDataURL("image/jpeg", 1.0);
+            // Trigger download of image
+            var link = document.createElement('a');
+            link.href = img;
+            link.download = 'image.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
             form.width(cache_width);
         });
     }
