@@ -57,6 +57,7 @@ h1,h2{
 }
 .banner-section .profile-img-div{
     min-width: 130px;
+    max-width: 130px;
     height: 130px;
     border-radius: 5px;
     border: 2px solid #03035a;
@@ -67,6 +68,7 @@ h1,h2{
 }
 .banner-section .profile-img-div img{
     min-width: 100%;
+    max-width: 130px;
     height: 100%;
 }
 .banner-section .profile-img-div.circle-design img{
@@ -74,6 +76,7 @@ h1,h2{
 }
 .banner-section .qrcode-img{
     min-width: 130px;
+    max-width: 130px;
     height: 130px;
 }
 .banner-section .dynamic-data{
@@ -139,6 +142,7 @@ footer{
 @media (max-width: 768px){
     .banner-section .profile-img-div,.banner-section .qrcode-img{
         min-width: 90px;
+        max-width: 90px;
         height: 90px;
     }
     .banner-section .input-section > div{
